@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-arabic: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
+}
+
+html {
+  font-family: var(--font-arabic);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFDF8;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RTL overrides */
+[dir="rtl"] * {
+  letter-spacing: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+/* Mobile touch targets */
+button, a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Fix inline elements like spans */
+span, p, h1, h2, h3, h4, h5, h6 {
+  min-height: unset;
+  display: revert;
+}
+
+@layer utilities {
+  .max-w-content {
+    max-width: 1280px;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ─── WAZZEN ANIMATIONS ─────────────────────────────────────── */
+
+@keyframes wz-fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wz-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes wz-scale-in {
+  from { opacity: 0; transform: scale(0.93); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes wz-slide-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes wz-pulse-ring {
+  0%   { transform: scale(1); opacity: 0.6; }
+  70%  { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes wz-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.wz-fade-up   { animation: wz-fade-up   0.65s cubic-bezier(0.16,1,0.3,1) both; }
+.wz-fade-in   { animation: wz-fade-in   0.5s  ease-out both; }
+.wz-scale-in  { animation: wz-scale-in  0.5s  cubic-bezier(0.16,1,0.3,1) both; }
+.wz-slide-r   { animation: wz-slide-right 0.55s cubic-bezier(0.16,1,0.3,1) both; }
+
+.wz-d0  { animation-delay: 0s;    }
+.wz-d1  { animation-delay: 0.08s; }
+.wz-d2  { animation-delay: 0.16s; }
+.wz-d3  { animation-delay: 0.24s; }
+.wz-d4  { animation-delay: 0.32s; }
+.wz-d5  { animation-delay: 0.4s;  }
+.wz-d6  { animation-delay: 0.48s; }
+.wz-d7  { animation-delay: 0.56s; }
+
+.wz-pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: wz-pulse-ring 2s ease-out infinite;
+  border: 2px solid currentColor;
+}
+
+@keyframes wz-float {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-7px); }
+}
+@keyframes wz-float-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes wz-glow-pulse {
+  0%, 100% { box-shadow: 0 8px 32px rgba(16,185,129,0.25); }
+  50%       { box-shadow: 0 8px 48px rgba(16,185,129,0.55); }
+}
+@keyframes wz-text-fade {
+  0%   { opacity: 0; transform: translateY(8px);  }
+  15%  { opacity: 1; transform: translateY(0);    }
+  80%  { opacity: 1; transform: translateY(0);    }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+.wz-float      { animation: wz-float      3s ease-in-out infinite; }
+.wz-float-in   { animation: wz-float-in   0.5s cubic-bezier(0.16,1,0.3,1) both; }
+.wz-glow-pulse { animation: wz-glow-pulse 2.5s ease-in-out infinite; }
