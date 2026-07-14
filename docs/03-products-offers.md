@@ -2,38 +2,38 @@
 
 ## Product Catalog
 
-### 1. Nano-Titanium Windshield Umbrella
+### 1. WAZZEN Windshield Crack Repair Kit
 
-SKU: `WAZ-UMB-NT01`  
-Slug: `nano-titanium-windshield-umbrella`  
-Arabic name: `مظلة وازن النانو-تيتانيوم الحرارية للزجاج الأمامي`  
-Short card heading: `حاجز سريع بين سيارتك وشمس الظهر`  
-Card subheading: `مظلة نانو-تيتانيوم تنفتح بثوانٍ وتساعد على تقليل تسخين المقود والطبلون.`  
+SKU: `WAZ-GLS-CRK01`  
+Slug: `wazzen-windshield-crack-repair-kit`  
+Arabic name: `عدة وازن لإصلاح شقوق ونقر الزجاج الأمامي`  
+Short card heading: `لا تؤجل النقرة الصغيرة`  
+Card subheading: `عدة إصلاح ريزن للنقر المناسبة قبل أن تتمدد وتكلفك أكثر.`  
+Primary pain: suitable small windshield chips or micro-cracks that may spread.  
+Emotion: urgency, savings, control.  
+Mechanism: resin injector, curing films, and clear suitability instructions.
+
+### 2. WAZZEN Foldable Windshield Sun Umbrella
+
+SKU: `WAZ-UMB-FLD01`  
+Slug: `wazzen-foldable-windshield-umbrella`  
+Arabic name: `مظلة وازن القابلة للطي للزجاج الأمامي`  
+Short card heading: `ظل فوري لزجاج سيارتك الأمامي`  
+Card subheading: `مظلة زجاج أمامي عملية تطوى بسرعة وتخفف الإحساس بحرارة المقصورة.`  
 Primary pain: direct sun exposure while parked.  
-Emotion: relief, protection, convenience.  
-Mechanism: reflective nano-titanium layer, umbrella-style quick fold, padded tip, compact storage.
+Emotion: relief, comfort, convenience.  
+Mechanism: reflective layer, umbrella-style quick fold, compact storage.
 
-### 2. WAZZEN AirSafe Auto-Stop Tire Inflator
+### 3. WAZZEN Portable Smart Tire Inflator
 
-SKU: `WAZ-AIR-AS01`  
-Slug: `wazzen-airsafe-tire-inflator`  
-Arabic name: `منفاخ وازن AirSafe الذكي للإطارات بإيقاف تلقائي`  
+SKU: `WAZ-AIR-PT01`  
+Slug: `wazzen-portable-tire-inflator`  
+Arabic name: `منفاخ وازن المحمول الذكي للإطارات`  
 Short card heading: `ضغط الإطار الصحيح بضغطة واحدة`  
-Card subheading: `يقيس الضغط وينفخ حتى القيمة التي تحددها ثم يتوقف تلقائياً.`  
+Card subheading: `منفاخ ذكي يقيس الضغط وينفخ حتى الرقم المحدد مع توقف تلقائي.`  
 Primary pain: low tire pressure before a commute or trip.  
 Emotion: preparedness, control, safety.  
-Mechanism: digital pressure reading, target preset, automatic stop, emergency light.
-
-### 3. WAZZEN GlassGuard Windshield Chip System
-
-SKU: `WAZ-GLS-GG01`  
-Slug: `wazzen-glassguard-chip-system`  
-Arabic name: `نظام وازن GlassGuard لإصلاح نقر الزجاج الأمامي`  
-Short card heading: `لا تترك نقرة صغيرة تتحول لمشكلة أكبر`  
-Card subheading: `نظام حقن يساعد على ملء النقر المناسبة وتقليل وضوحها والحد من تمددها.`  
-Primary pain: suitable small windshield chips that may spread.  
-Emotion: urgency, savings, control.  
-Mechanism: resin injector, curing films, and clear eligibility instructions.
+Mechanism: digital pressure reading, target preset, automatic stop, compact body.
 
 ## Bundle Pricing
 
@@ -71,9 +71,9 @@ Use placeholder review counts until real numbers are available. Mark seed data c
 
 In product pages and cart drawer:
 
-- If cart has the umbrella, recommend AirSafe and GlassGuard.
-- If cart has AirSafe, recommend the umbrella and GlassGuard.
-- If cart has GlassGuard, recommend the umbrella and AirSafe.
+- If cart has the foldable umbrella, recommend the crack repair kit and tire inflator.
+- If cart has the tire inflator, recommend the foldable umbrella and crack repair kit.
+- If cart has the crack repair kit, recommend the foldable umbrella and tire inflator.
 - Cross-sells before checkout are not discounted. Use the normal 1-piece price of `199 SAR`.
 
 Cart drawer cross-sell copy:
@@ -91,13 +91,13 @@ This is the only discounted product placement in the store.
 
 Recommended upsell mapping:
 
-- Main cart contains umbrella only -> upsell AirSafe.
-- Main cart contains AirSafe only -> upsell umbrella.
-- Main cart contains GlassGuard only -> upsell AirSafe.
-- Cart contains umbrella + AirSafe -> upsell GlassGuard.
-- Cart contains umbrella + GlassGuard -> upsell AirSafe.
-- Cart contains AirSafe + GlassGuard -> upsell umbrella.
-- Cart contains all three -> upsell one additional umbrella or GlassGuard depending on available margin.
+- Main cart contains foldable umbrella only -> upsell tire inflator.
+- Main cart contains tire inflator only -> upsell foldable umbrella.
+- Main cart contains crack repair kit only -> upsell tire inflator.
+- Cart contains foldable umbrella + tire inflator -> upsell crack repair kit.
+- Cart contains foldable umbrella + crack repair kit -> upsell tire inflator.
+- Cart contains tire inflator + crack repair kit -> upsell foldable umbrella.
+- Cart contains all three -> upsell one additional foldable umbrella or crack repair kit depending on available margin.
 
 Upsell copy:
 

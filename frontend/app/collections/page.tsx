@@ -4,14 +4,14 @@ import { products } from "@/data/products";
 import { ProductCard } from "@/components/product/ProductCard";
 
 export const metadata: Metadata = {
-  title: "كل منتجات وازن | مظلة نانو، منفاخ ذكي، إصلاح نقر الزجاج",
-  description: "تصفح حلول وازن للسائق في السعودية: مظلة نانو-تيتانيوم، منفاخ AirSafe الذكي، ونظام GlassGuard لنقر الزجاج. الدفع عند الاستلام.",
+  title: "كل منتجات وازن | مظلة قابلة للطي، منفاخ ذكي، وإصلاح شقوق الزجاج",
+  description: "تصفح حلول وازن للسائق في السعودية: عدة إصلاح شقوق الزجاج، مظلة زجاج أمامي قابلة للطي، ومنفاخ إطارات محمول ذكي. الدفع عند الاستلام.",
 };
 
 const benefits = [
-  { label: "حماية من الشمس", icon: "☀️", productId: "nano-titanium-windshield-umbrella" },
-  { label: "ضغط الإطارات", icon: "🛞", productId: "wazzen-airsafe-tire-inflator" },
-  { label: "نقر الزجاج", icon: "🔎", productId: "wazzen-glassguard-chip-system" },
+  { label: "إصلاح الزجاج", icon: "🔧", productId: "wazzen-windshield-crack-repair-kit" },
+  { label: "حماية من الشمس", icon: "☀️", productId: "wazzen-foldable-windshield-umbrella" },
+  { label: "ضغط الإطارات", icon: "🛞", productId: "wazzen-portable-tire-inflator" },
 ];
 
 export default function CollectionsPage() {

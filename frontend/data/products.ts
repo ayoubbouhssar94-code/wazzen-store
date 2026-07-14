@@ -146,7 +146,7 @@ export const products: Product[] = [
     offers: [
       {
         qty: 1,
-        label: "جهاز AirSafe واحد",
+        label: "جهاز منفاخ واحد",
         benefit: "خله في الشنطة ليكون جاهزاً عند انخفاض الضغط",
         price: 199,
       },

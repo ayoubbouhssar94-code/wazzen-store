@@ -36,9 +36,9 @@ Frontend requirements:
 - Build pages: home, collections, 3 product pages, about, contact, thank-you, privacy, returns, shipping, terms.
 - Build header with circular W mark, Arabic logo وازن, English wazzen below/near it, menu, and cart.
 - Build product cards and PDPs for:
-  1. Nano-Titanium Windshield Umbrella / مظلة وازن النانو-تيتانيوم الحرارية للزجاج الأمامي
-  2. WAZZEN AirSafe Auto-Stop Tire Inflator / منفاخ وازن AirSafe الذكي للإطارات بإيقاف تلقائي
-  3. WAZZEN GlassGuard Windshield Chip System / نظام وازن GlassGuard لإصلاح نقر الزجاج الأمامي
+  1. WAZZEN Windshield Crack Repair Kit / عدة وازن لإصلاح شقوق ونقر الزجاج الأمامي
+  2. WAZZEN Foldable Windshield Sun Umbrella / مظلة وازن القابلة للطي للزجاج الأمامي
+  3. WAZZEN Portable Smart Tire Inflator / منفاخ وازن المحمول الذكي للإطارات
 - Each product has offers:
   - 1 piece = 199 SAR
   - 2 pieces = 279 SAR

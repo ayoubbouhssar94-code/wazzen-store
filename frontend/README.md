@@ -36,9 +36,9 @@ docker run -p 3000:3000 --env-file .env wazzen-frontend
 |-------|-------------|
 | `/` | Homepage with hero, products, proof, FAQ |
 | `/collections` | All products collection page |
-| `/products/nano-titanium-windshield-umbrella` | Nano-Titanium Umbrella PDP |
-| `/products/wazzen-airsafe-tire-inflator` | AirSafe Tire Inflator PDP |
-| `/products/wazzen-glassguard-chip-system` | GlassGuard Chip System PDP |
+| `/products/wazzen-foldable-windshield-umbrella` | Foldable Windshield Umbrella PDP |
+| `/products/wazzen-portable-tire-inflator` | Portable Tire Inflator PDP |
+| `/products/wazzen-windshield-crack-repair-kit` | Windshield Crack Repair Kit PDP |
 | `/about` | About WAZZEN |
 | `/contact` | WhatsApp + email contact |
 | `/thank-you` | Post-order thank you page |

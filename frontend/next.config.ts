@@ -9,17 +9,32 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/products/titanium-silver-sunshade",
-        destination: "/products/nano-titanium-windshield-umbrella",
+        destination: "/products/wazzen-foldable-windshield-umbrella",
         permanent: true,
       },
       {
         source: "/products/premium-leather-gap-console",
-        destination: "/products/wazzen-airsafe-tire-inflator",
+        destination: "/products/wazzen-portable-tire-inflator",
         permanent: true,
       },
       {
         source: "/products/hepa-car-vacuum",
-        destination: "/products/wazzen-glassguard-chip-system",
+        destination: "/products/wazzen-windshield-crack-repair-kit",
+        permanent: true,
+      },
+      {
+        source: "/products/nano-titanium-windshield-umbrella",
+        destination: "/products/wazzen-foldable-windshield-umbrella",
+        permanent: true,
+      },
+      {
+        source: "/products/wazzen-airsafe-tire-inflator",
+        destination: "/products/wazzen-portable-tire-inflator",
+        permanent: true,
+      },
+      {
+        source: "/products/wazzen-glassguard-chip-system",
+        destination: "/products/wazzen-windshield-crack-repair-kit",
         permanent: true,
       },
     ];

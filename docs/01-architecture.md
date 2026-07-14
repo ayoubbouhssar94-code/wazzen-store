@@ -54,9 +54,9 @@ Ad click
 ```text
 /
 /collections
-/products/nano-titanium-windshield-umbrella
-/products/wazzen-airsafe-tire-inflator
-/products/wazzen-glassguard-chip-system
+/products/wazzen-foldable-windshield-umbrella
+/products/wazzen-portable-tire-inflator
+/products/wazzen-windshield-crack-repair-kit
 /about
 /contact
 /thank-you
