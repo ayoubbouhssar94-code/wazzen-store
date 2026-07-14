@@ -5,6 +5,8 @@ import { SectionImagePlaceholder } from "@/components/product/SectionImagePlaceh
 import { RotatingText } from "@/components/ui/RotatingText";
 import { ChevronLeft, Truck, ShieldCheck, RotateCcw, MessageCircle } from "lucide-react";
 
+// Force rebuild: 2026-07-14-v2
+
 const faqs = [
   { q: "كيف يتم الدفع؟", a: "الدفع عند الاستلام فقط — ما في دفع مسبق أو بطاقة بنكية." },
   { q: "كم يستغرق التوصيل؟", a: "3-5 أيام عمل لجميع مناطق المملكة. فريق التوصيل يتواصل معك لتأكيد الموعد." },
