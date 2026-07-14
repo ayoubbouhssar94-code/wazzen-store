@@ -12,7 +12,7 @@ export type Review = {
 export const reviews: Review[] = [
   {
     id: "r1",
-    productId: "nano-titanium-windshield-umbrella",
+    productId: "wazzen-foldable-windshield-umbrella",
     authorAr: "أم عبدالله",
     city: "الرياض",
     textAr: "تركيبها أسرع من المظلة القديمة، وتدخل في الجراب بدون ما تأخذ مساحة في السيارة.",
@@ -21,7 +21,7 @@ export const reviews: Review[] = [
   },
   {
     id: "r2",
-    productId: "nano-titanium-windshield-umbrella",
+    productId: "wazzen-foldable-windshield-umbrella",
     authorAr: "سارة م.",
     city: "جدة",
     textAr: "تغطي الزجاج بشكل جيد وتساعد على حماية المقود والطبلون من الشمس المباشرة.",
@@ -30,7 +30,7 @@ export const reviews: Review[] = [
   },
   {
     id: "r3",
-    productId: "wazzen-airsafe-tire-inflator",
+    productId: "wazzen-portable-tire-inflator",
     authorAr: "نورة ع.",
     city: "الدمام",
     textAr: "ظهر عندي تنبيه الضغط، حددت الرقم وشغلته ووقف تلقائياً عند القيمة المطلوبة.",
@@ -39,7 +39,7 @@ export const reviews: Review[] = [
   },
   {
     id: "r4",
-    productId: "wazzen-airsafe-tire-inflator",
+    productId: "wazzen-portable-tire-inflator",
     authorAr: "هند ك.",
     city: "مكة المكرمة",
     textAr: "الشاشة واضحة والجهاز صغير مع ملحقاته. خليته دائماً في شنطة السيارة.",
@@ -48,7 +48,7 @@ export const reviews: Review[] = [
   },
   {
     id: "r5",
-    productId: "wazzen-glassguard-chip-system",
+    productId: "wazzen-windshield-crack-repair-kit",
     authorAr: "ريم ب.",
     city: "الرياض",
     textAr: "اتبعت الخطوات على نقرة صغيرة والنتيجة خففت وضوحها. مهم تتأكد أن نوع النقرة مناسب.",
@@ -57,7 +57,7 @@ export const reviews: Review[] = [
   },
   {
     id: "r6",
-    productId: "wazzen-glassguard-chip-system",
+    productId: "wazzen-windshield-crack-repair-kit",
     authorAr: "لمياء ه.",
     city: "الخبر",
     textAr: "الدليل واضح والأدوات مرتبة. ما استخدمته على الشرخ الطويل لأن الصفحة توضح أنه يحتاج مختص.",

@@ -9,6 +9,9 @@ import { MetaPixel } from "@/components/tracking/MetaPixel";
 import { TikTokPixel } from "@/components/tracking/TikTokPixel";
 import { SnapPixel } from "@/components/tracking/SnapPixel";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: "وازن | منتجات ذكية لراحة السيارة في السعودية",
   description:
