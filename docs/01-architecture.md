@@ -54,9 +54,9 @@ Ad click
 ```text
 /
 /collections
-/products/titanium-silver-sunshade
-/products/premium-leather-gap-console
-/products/hepa-car-vacuum
+/products/nano-titanium-windshield-umbrella
+/products/wazzen-airsafe-tire-inflator
+/products/wazzen-glassguard-chip-system
 /about
 /contact
 /thank-you

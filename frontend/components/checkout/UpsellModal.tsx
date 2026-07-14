@@ -212,10 +212,12 @@ export function UpsellModal({ products, onAccept, onDecline, isOpen }: UpsellMod
 
                     <div className="rounded-xl overflow-hidden">
                       <SectionImagePlaceholder
-                        labelAr="صورة"
+                        labelAr={product.nameAr}
                         aspectRatio="1:1"
                         color={product.color}
                         className="rounded-xl"
+                        src={product.image}
+                        imageFit={product.imageFit ?? "cover"}
                       />
                     </div>
 
@@ -256,7 +258,7 @@ export function UpsellModal({ products, onAccept, onDecline, isOpen }: UpsellMod
           <div className="flex gap-2.5">
             <button
               onClick={handleDecline}
-              className="flex-shrink-0 border border-[#E2E8F0] text-[#64748B] hover:text-[#0F172A] hover:bg-[#F8FAFC] font-medium px-4 py-3.5 rounded-xl transition-colors text-sm"
+              className="flex-shrink-0 border-2 border-[#CBD5E1] text-[#0F172A] hover:bg-[#F8FAFC] font-bold px-5 py-3.5 rounded-xl transition-colors text-sm"
             >
               تخطي
             </button>

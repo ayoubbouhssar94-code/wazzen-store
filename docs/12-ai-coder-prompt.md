@@ -36,9 +36,9 @@ Frontend requirements:
 - Build pages: home, collections, 3 product pages, about, contact, thank-you, privacy, returns, shipping, terms.
 - Build header with circular W mark, Arabic logo وازن, English wazzen below/near it, menu, and cart.
 - Build product cards and PDPs for:
-  1. Titanium-Silver Sunshade Umbrella / مظلة التيتانيوم الفضية العاكسة ضد حرارة الـ 70 درجة
-  2. Premium PU Leather Gap Console / حشوة الجلد الفاخر للسيارة ضد ضياع الجوال والفوضى
-  3. High-Suction HEPA Car Vacuum / مكنسة الفلتر الذكي اللاسلكية ضد الغبار والرمل العميق
+  1. Nano-Titanium Windshield Umbrella / مظلة وازن النانو-تيتانيوم الحرارية للزجاج الأمامي
+  2. WAZZEN AirSafe Auto-Stop Tire Inflator / منفاخ وازن AirSafe الذكي للإطارات بإيقاف تلقائي
+  3. WAZZEN GlassGuard Windshield Chip System / نظام وازن GlassGuard لإصلاح نقر الزجاج الأمامي
 - Each product has offers:
   - 1 piece = 199 SAR
   - 2 pieces = 279 SAR

@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class ProductOut(BaseModel):
     id: str
+    sku: str
     slug: str
     name_ar: str
     name_en: str

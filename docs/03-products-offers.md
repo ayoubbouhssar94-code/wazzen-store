@@ -2,35 +2,38 @@
 
 ## Product Catalog
 
-### 1. Titanium-Silver Sunshade Umbrella
+### 1. Nano-Titanium Windshield Umbrella
 
-Slug: `titanium-silver-sunshade`  
-Arabic name: `مظلة التيتانيوم الفضية العاكسة ضد حرارة الـ 70 درجة`  
-Short card heading: `ودّعي حرارة السيارة وقت الظهر`  
-Card subheading: `مظلة عاكسة تساعد على حماية المقود، المقاعد، والديكور من الشمس الحادة.`  
-Primary pain: burning cabin heat.  
-Emotion: relief, protection, comfort for family.  
-Mechanism: reflective titanium-silver surface, umbrella-style quick fold, compact storage.
+SKU: `WAZ-UMB-NT01`  
+Slug: `nano-titanium-windshield-umbrella`  
+Arabic name: `مظلة وازن النانو-تيتانيوم الحرارية للزجاج الأمامي`  
+Short card heading: `حاجز سريع بين سيارتك وشمس الظهر`  
+Card subheading: `مظلة نانو-تيتانيوم تنفتح بثوانٍ وتساعد على تقليل تسخين المقود والطبلون.`  
+Primary pain: direct sun exposure while parked.  
+Emotion: relief, protection, convenience.  
+Mechanism: reflective nano-titanium layer, umbrella-style quick fold, padded tip, compact storage.
 
-### 2. Premium PU Leather Gap Console
+### 2. WAZZEN AirSafe Auto-Stop Tire Inflator
 
-Slug: `premium-leather-gap-console`  
-Arabic name: `حشوة الجلد الفاخر للسيارة ضد ضياع الجوال والفوضى`  
-Short card heading: `خلي جوالك ومفاتيحك بمكانها`  
-Card subheading: `حشوة جلد فاخرة تسد الفراغ وتضيف مساحة عملية بدون تركيب معقد.`  
-Primary pain: lost phone, clutter, unsafe searching while driving.  
-Emotion: order, calm, confidence.  
-Mechanism: premium PU leather, gap-fill fit, storage slots.
+SKU: `WAZ-AIR-AS01`  
+Slug: `wazzen-airsafe-tire-inflator`  
+Arabic name: `منفاخ وازن AirSafe الذكي للإطارات بإيقاف تلقائي`  
+Short card heading: `ضغط الإطار الصحيح بضغطة واحدة`  
+Card subheading: `يقيس الضغط وينفخ حتى القيمة التي تحددها ثم يتوقف تلقائياً.`  
+Primary pain: low tire pressure before a commute or trip.  
+Emotion: preparedness, control, safety.  
+Mechanism: digital pressure reading, target preset, automatic stop, emergency light.
 
-### 3. High-Suction HEPA Car Vacuum
+### 3. WAZZEN GlassGuard Windshield Chip System
 
-Slug: `hepa-car-vacuum`  
-Arabic name: `مكنسة الفلتر الذكي اللاسلكية ضد الغبار والرمل العميق`  
-Short card heading: `نظافة سريعة من الرمل والغبار`  
-Card subheading: `مكنسة لاسلكية بفلتر HEPA لتنظيف الرمل، الفتات، والغبار من تفاصيل السيارة.`  
-Primary pain: sand, dust, crumbs, dirty interior.  
-Emotion: satisfaction, pride, cleanliness.  
-Mechanism: cordless suction, HEPA filter, compact car storage.
+SKU: `WAZ-GLS-GG01`  
+Slug: `wazzen-glassguard-chip-system`  
+Arabic name: `نظام وازن GlassGuard لإصلاح نقر الزجاج الأمامي`  
+Short card heading: `لا تترك نقرة صغيرة تتحول لمشكلة أكبر`  
+Card subheading: `نظام حقن يساعد على ملء النقر المناسبة وتقليل وضوحها والحد من تمددها.`  
+Primary pain: suitable small windshield chips that may spread.  
+Emotion: urgency, savings, control.  
+Mechanism: resin injector, curing films, and clear eligibility instructions.
 
 ## Bundle Pricing
 
@@ -68,9 +71,9 @@ Use placeholder review counts until real numbers are available. Mark seed data c
 
 In product pages and cart drawer:
 
-- If cart has sunshade, recommend gap console and vacuum.
-- If cart has gap console, recommend sunshade and vacuum.
-- If cart has vacuum, recommend sunshade and gap console.
+- If cart has the umbrella, recommend AirSafe and GlassGuard.
+- If cart has AirSafe, recommend the umbrella and GlassGuard.
+- If cart has GlassGuard, recommend the umbrella and AirSafe.
 - Cross-sells before checkout are not discounted. Use the normal 1-piece price of `199 SAR`.
 
 Cart drawer cross-sell copy:
@@ -88,13 +91,13 @@ This is the only discounted product placement in the store.
 
 Recommended upsell mapping:
 
-- Main cart contains sunshade only -> upsell gap console.
-- Main cart contains gap console only -> upsell sunshade.
-- Main cart contains vacuum only -> upsell gap console.
-- Cart contains sunshade + gap console -> upsell vacuum.
-- Cart contains sunshade + vacuum -> upsell gap console.
-- Cart contains gap console + vacuum -> upsell sunshade.
-- Cart contains all three -> upsell one additional sunshade or vacuum depending on highest margin.
+- Main cart contains umbrella only -> upsell AirSafe.
+- Main cart contains AirSafe only -> upsell umbrella.
+- Main cart contains GlassGuard only -> upsell AirSafe.
+- Cart contains umbrella + AirSafe -> upsell GlassGuard.
+- Cart contains umbrella + GlassGuard -> upsell AirSafe.
+- Cart contains AirSafe + GlassGuard -> upsell umbrella.
+- Cart contains all three -> upsell one additional umbrella or GlassGuard depending on available margin.
 
 Upsell copy:
 

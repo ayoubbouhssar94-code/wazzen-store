@@ -27,7 +27,6 @@ services:
       - .env
     environment:
       DATABASE_URL: postgresql+asyncpg://wazzen:wazzen@wazzen_database:5432/wazzen
-      RUN_MIGRATIONS_ON_START: "true"
     depends_on:
       wazzen_database:
         condition: service_healthy

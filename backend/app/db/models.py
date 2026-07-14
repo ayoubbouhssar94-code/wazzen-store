@@ -32,6 +32,12 @@ class Product(Base):
 
     order_items: Mapped[list["OrderItem"]] = relationship(back_populates="product")
 
+    @property
+    def sku(self) -> str:
+        from app.db.product_catalog import get_product_sku
+
+        return get_product_sku(self.id)
+
 
 class Order(Base):
     __tablename__ = "orders"

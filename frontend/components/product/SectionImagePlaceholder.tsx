@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type SectionImagePlaceholderProps = {
@@ -5,6 +6,10 @@ type SectionImagePlaceholderProps = {
   aspectRatio?: "1:1" | "4:3" | "16:9" | "3:4";
   color?: string;
   className?: string;
+  /** Real product photo path (e.g. "/products/foo.png"). Falls back to the styled placeholder when omitted. */
+  src?: string;
+  /** How the image fills its container when src is set */
+  imageFit?: "cover" | "contain";
 };
 
 const aspectClasses: Record<string, string> = {
@@ -19,7 +24,31 @@ export function SectionImagePlaceholder({
   aspectRatio = "1:1",
   color = "#0EA5E9",
   className,
+  src,
+  imageFit = "cover",
 }: SectionImagePlaceholderProps) {
+  if (src) {
+    return (
+      <div
+        className={cn(
+          "w-full rounded-2xl flex items-center justify-center overflow-hidden relative bg-[#F8FAFC]",
+          aspectClasses[aspectRatio],
+          className
+        )}
+        style={{ border: `1.5px solid ${color}22` }}
+      >
+        <Image
+          src={src}
+          alt={labelAr}
+          fill
+          sizes="(max-width: 768px) 100vw, 480px"
+          className={imageFit === "contain" ? "object-contain p-3" : "object-cover"}
+          priority={false}
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(

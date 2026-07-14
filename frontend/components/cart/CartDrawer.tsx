@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { X, Trash2, ShoppingBag } from "lucide-react";
 import { useCartStore } from "@/lib/cart";
 import { products } from "@/data/products";
@@ -73,28 +74,47 @@ export function CartDrawer() {
           ) : (
             <>
               {/* Cart Items */}
-              {mainItems.map((item) => (
-                <div
-                  key={item.productId}
-                  className="flex items-center gap-3 bg-[#F8FAFC] rounded-xl p-3"
-                >
-                  <div className="flex-1">
-                    <p className="font-semibold text-sm text-[#0F172A] line-clamp-2">
-                      {item.nameAr}
-                    </p>
-                    <p className="text-xs text-[#64748B] mt-1">
-                      {item.quantity} {item.quantity === 1 ? "قطعة" : "قطع"} — {item.pricePerBundle} ريال
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => removeItem(item.productId)}
-                    className="p-1.5 rounded-lg hover:bg-red-50 hover:text-red-500 transition-colors text-[#64748B]"
-                    aria-label={`حذف ${item.nameAr}`}
+              {mainItems.map((item) => {
+                const product = products.find((p) => p.id === item.productId);
+                return (
+                  <div
+                    key={item.productId}
+                    className="flex items-center gap-3 bg-[#F8FAFC] rounded-xl p-3"
                   >
-                    <Trash2 className="w-4 h-4" />
-                  </button>
-                </div>
-              ))}
+                    {product?.image && (
+                      <div className="relative w-14 h-14 rounded-lg overflow-hidden bg-white border border-[#E2E8F0] flex-shrink-0">
+                        <Image
+                          src={product.image}
+                          alt={item.nameAr}
+                          fill
+                          sizes="56px"
+                          className="object-contain p-1"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <p className="font-semibold text-sm text-[#0F172A] line-clamp-2">
+                        {item.nameAr}
+                      </p>
+                      {product && (
+                        <p className="text-[10px] text-[#94A3B8]" dir="ltr">
+                          SKU: {product.sku}
+                        </p>
+                      )}
+                      <p className="text-xs text-[#64748B] mt-1">
+                        {item.quantity} {item.quantity === 1 ? "قطعة" : "قطع"} — {item.pricePerBundle} ريال
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => removeItem(item.productId)}
+                      className="p-1.5 rounded-lg hover:bg-red-50 hover:text-red-500 transition-colors text-[#64748B]"
+                      aria-label={`حذف ${item.nameAr}`}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                );
+              })}
 
               {/* Cross-sells */}
               {uniqueCrossSells.length > 0 && (
@@ -107,6 +127,17 @@ export function CartDrawer() {
                       key={p.id}
                       className="flex items-center justify-between gap-3 bg-[#F0F9FF] rounded-xl p-3 mb-2"
                     >
+                      {p.image && (
+                        <div className="relative w-11 h-11 rounded-lg overflow-hidden bg-white border border-[#E2E8F0] flex-shrink-0">
+                          <Image
+                            src={p.image}
+                            alt={p.nameAr}
+                            fill
+                            sizes="44px"
+                            className="object-contain p-1"
+                          />
+                        </div>
+                      )}
                       <div className="flex-1">
                         <p className="text-sm font-semibold text-[#0F172A] line-clamp-1">
                           {p.cardHeadingAr}

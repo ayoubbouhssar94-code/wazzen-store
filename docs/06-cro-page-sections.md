@@ -17,10 +17,10 @@ Recommended structure:
 1. Header.
 2. Hero: brand promise + 3-product visual + CTA.
 3. Trust strip: COD, fast delivery, warranty/replacement, WhatsApp support.
-4. Problem section: Saudi heat, dust, clutter.
-5. Product system section: heat protection, organization, cleaning.
+4. Problem section: direct sun, low tire pressure, windshield chips.
+5. Product system section: parked-car protection, roadside readiness, early chip repair.
 6. Featured product cards with bundle offers.
-7. Science/authority section: materials, HEPA, reflective layers, Gulf climate.
+7. Science/authority section: reflective layers, pressure measurement, resin injection, Gulf climate.
 8. Social proof wall: UGC/review placeholders.
 9. Offer section: `اختاري باقتك ووفرّي أكثر`.
 10. FAQ objections: delivery, COD, compatibility, returns.
@@ -30,8 +30,8 @@ Recommended structure:
 Hero copy:
 
 ```text
-وازن سيارتك ضد حر السعودية وغبارها
-منتجات مختارة لراحة السيارة: حماية من الشمس، ترتيب داخلي، وتنظيف سريع للرمل والغبار.
+وازن سيارتك ضد مفاجآت الطريق وشمس السعودية
+حلول مختارة للسائق: حماية من الشمس، ضبط ضغط الإطارات، ومعالجة النقر المناسبة في الزجاج.
 اطلبي الآن والدفع عند الاستلام.
 ```
 
@@ -42,7 +42,7 @@ Purpose: help visitors compare the 3 products quickly and enter the right PDP.
 Sections:
 
 1. Collection hero: `كل حلول وازن في مكان واحد`.
-2. Filter-like benefit tabs: حرارة، فوضى، غبار.
+2. Filter-like benefit tabs: شمس، ضغط الإطارات، نقر الزجاج.
 3. Three product cards.
 4. Bundle education: why 2 or 3 pieces make sense for family/multiple cars.
 5. Trust/FAQ strip.
@@ -76,56 +76,56 @@ Each PDP must include:
 9. FAQ.
 10. Sticky mobile CTA.
 
-## Sunshade PDP Angles
+## Nano-Titanium Umbrella PDP Angles
 
 Headline:
 
-`لا تفتحين باب السيارة وتحسينها فرن`
+`افتحها بثوانٍ واحمِ المقود والطبلون من الشمس المباشرة`
 
 Pain copy:
 
-`شمس السعودية ما ترحم: مقود حار، مقاعد تحرق، وديكور يتعب مع الوقت. مظلة وازن العاكسة تساعد تخفف التعرض المباشر للشمس وتحافظ على راحة السيارة وقت الوقوف.`
+`عندما تقف السيارة تحت الشمس، يمتص المقود والطبلون والمقاعد حرارة مباشرة لساعات. مظلة وازن تصنع حاجزاً عاكساً خلف الزجاج وتُركب وتُطوى بسرعة.`
 
 Mechanism bullets:
 
-- `سطح فضي عاكس يساعد على تقليل امتصاص الحرارة`
-- `تصميم مظلة ينفتح وينطوي بسرعة`
-- `تحمي المقود والطبلون من الشمس المباشرة`
-- `تخزين سهل داخل الباب أو الدرج`
+- `طبقة نانو-تيتانيوم عاكسة تقلل وصول الإشعاع المباشر`
+- `هيكل مظلة مرن ينفتح وينطوي بسرعة`
+- `طرف مبطن لتقليل احتكاك المقبض بالطبلون`
+- `جراب مدمج وتخزين سهل`
 
-## Gap Console PDP Angles
+## AirSafe Tire Inflator PDP Angles
 
 Headline:
 
-`الجوال ما يضيع بين المقاعد مرة ثانية`
+`اضبط الضغط المطلوب واترك AirSafe يتوقف تلقائياً`
 
 Pain copy:
 
-`لحظة وحدة يطيح الجوال أو المفتاح بين المقعد والكونسول، وتبدأ الفوضى. حشوة وازن تسد الفراغ وتضيف مساحة مرتبة للأشياء اللي تحتاجينها كل يوم.`
+`تنبيه ضغط منخفض قبل المشوار أو إطار ناقص بعيداً عن محطة الهواء قد يعطل يومك. AirSafe يتيح لك قياس الضغط وإعادته للقيمة المطلوبة أينما كنت.`
 
 Mechanism bullets:
 
-- `جلد PU فاخر يعطي شكل مرتب`
-- `يسد الفراغ بين المقعد والكونسول`
-- `مكان عملي للجوال، المفاتيح، والبطاقات`
-- `تركيب سريع بدون أدوات`
+- `شاشة رقمية للضغط الحالي والمستهدف`
+- `إيقاف تلقائي عند الوصول للقيمة المحددة`
+- `وحدات PSI وBAR وKPA`
+- `إضاءة طوارئ وملحقات متعددة`
 
-## Vacuum PDP Angles
+## GlassGuard PDP Angles
 
 Headline:
 
-`الرمل والغبار ما يحتاجون مغسلة كل مرة`
+`عالج النقرة المناسبة قبل أن تتمدد إلى شرخ أكبر`
 
 Pain copy:
 
-`بعد مشوار، أطفال، بحر، أو غبار، السيارة تتعب بسرعة. مكنسة وازن اللاسلكية تساعدك تنظفين التفاصيل الصغيرة بسرعة وتحافظين على شكل السيارة من الداخل.`
+`حصاة صغيرة على الطريق قد تترك نقرة تتوسع مع تغير الحرارة والاهتزاز. GlassGuard يمنحك طريقة عملية لمعالجة أنواع محددة من النقر مبكراً.`
 
 Mechanism bullets:
 
-- `لاسلكية وسهلة التخزين`
-- `فلتر HEPA يساعد على حبس الغبار الناعم`
-- `رأس مناسب للزوايا وبين المقاعد`
-- `مثالية للرمل والفتات والتنظيف السريع`
+- `قاعدة حقن تضغط الريزن داخل النقرة المناسبة`
+- `أفلام معالجة تساعد على تسوية السطح`
+- `دليل عربي يوضح أشكال الضرر المناسبة`
+- `ليس للشروخ الطويلة أو العميقة`
 
 ## About Page
 

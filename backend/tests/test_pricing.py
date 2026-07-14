@@ -15,7 +15,7 @@ def test_invalid_offer_quantity():
 
 
 def test_single_item_1piece():
-    items = [OrderItemIn(product_id="titanium-silver-sunshade", quantity=1)]
+    items = [OrderItemIn(product_id="nano-titanium-windshield-umbrella", quantity=1)]
     result = calculate_totals(items)
     assert result["subtotal_sar"] == 199
     assert result["upsell_sar"] == 0
@@ -23,22 +23,22 @@ def test_single_item_1piece():
 
 
 def test_single_item_2piece():
-    items = [OrderItemIn(product_id="titanium-silver-sunshade", quantity=2)]
+    items = [OrderItemIn(product_id="nano-titanium-windshield-umbrella", quantity=2)]
     result = calculate_totals(items)
     assert result["subtotal_sar"] == 279
     assert result["total_sar"] == 279
 
 
 def test_single_item_3piece():
-    items = [OrderItemIn(product_id="hepa-car-vacuum", quantity=3)]
+    items = [OrderItemIn(product_id="wazzen-glassguard-chip-system", quantity=3)]
     result = calculate_totals(items)
     assert result["subtotal_sar"] == 349
 
 
 def test_with_upsell():
     items = [
-        OrderItemIn(product_id="titanium-silver-sunshade", quantity=2),
-        OrderItemIn(product_id="premium-leather-gap-console", quantity=1, is_upsell=True),
+        OrderItemIn(product_id="nano-titanium-windshield-umbrella", quantity=2),
+        OrderItemIn(product_id="wazzen-airsafe-tire-inflator", quantity=1, is_upsell=True),
     ]
     result = calculate_totals(items)
     assert result["subtotal_sar"] == 279

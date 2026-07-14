@@ -50,6 +50,13 @@ export type OrderResponse = {
   created_at: string;
 };
 
+export class ApiError extends Error {
+  constructor(message: string, public readonly status: number) {
+    super(message);
+    this.name = "ApiError";
+  }
+}
+
 export async function submitOrder(payload: OrderPayload): Promise<OrderResponse> {
   const res = await fetch(`${API_BASE}/orders`, {
     method: "POST",
@@ -58,12 +65,12 @@ export async function submitOrder(payload: OrderPayload): Promise<OrderResponse>
   });
 
   if (!res.ok) {
-    const err = await res.json().catch(() => ({ detail: "حدث خطأ. يرجى المحاولة مرة أخرى." }));
-    throw new Error(
-      typeof err.detail === "string"
-        ? err.detail
-        : "حدث خطأ في إرسال الطلب. يرجى المحاولة مرة أخرى."
-    );
+    const body = await res.json().catch(() => ({ detail: "حدث خطأ. يرجى المحاولة مرة أخرى." }));
+    const message =
+      typeof body.detail === "string"
+        ? body.detail
+        : "حدث خطأ في إرسال الطلب. يرجى المحاولة مرة أخرى.";
+    throw new ApiError(message, res.status);
   }
 
   return res.json();

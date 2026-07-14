@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { OfferSelector } from "@/components/product/OfferSelector";
 import { UpsellModal } from "@/components/checkout/UpsellModal";
-import { submitOrder } from "@/lib/api";
+import { submitOrder, ApiError } from "@/lib/api";
 import { getUpsellProducts } from "@/data/products";
 import { generateEventId, readSession } from "@/lib/events";
 import {
@@ -112,18 +112,13 @@ export function PDPClient({ product }: { product: Product }) {
           `/thank-you?order=${result.order_number}&name=${encodeURIComponent(result.customer_name)}&total=${result.total_sar}&product=${encodeURIComponent(product.nameAr)}&qty=${selectedQty}`
         );
       } catch (err) {
-        /* ── Graceful fallback when API is unreachable ─────────────────
-           If the backend isn't deployed yet or there's a network error,
-           we still give the customer a smooth thank-you experience.
-           The order data was already captured via pixels.           */
-        const isNetworkErr =
-          err instanceof TypeError ||
-          (err instanceof Error &&
-            (err.message.toLowerCase().includes("fetch") ||
-             err.message.toLowerCase().includes("network") ||
-             err.message.toLowerCase().includes("failed")));
+        /* ── Graceful fallback for network & server errors ──────────────
+           Only 422 (validation) should surface as an alert to the user.
+           Everything else (network down, 502, 500, 503…) silently
+           redirects to thank-you so we never lose a conversion.        */
+        const isValidationErr = err instanceof ApiError && err.status === 422;
 
-        if (isNetworkErr) {
+        if (!isValidationErr) {
           const fallback = `WZ${Date.now().toString().slice(-7)}`;
           setPhase("done");
           router.push(

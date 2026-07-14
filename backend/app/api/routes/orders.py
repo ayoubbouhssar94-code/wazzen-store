@@ -16,6 +16,7 @@ from app.services.sheets import send_to_sheets
 from app.services.capi_meta import send_meta_purchase
 from app.services.capi_tiktok import send_tiktok_purchase
 from app.services.capi_snap import send_snap_purchase
+from app.db.product_catalog import get_product_name_ar, get_product_sku
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -29,7 +30,7 @@ async def _generate_order_number(db: AsyncSession) -> str:
         )
     )
     count = (result.scalar() or 0) + 1
-    return f"WZ-{today}-{count:06d}"
+    return f"NAMA-{today}-{count:06d}"
 
 
 @router.post("/orders", response_model=OrderOut, status_code=201)
@@ -119,13 +120,15 @@ async def create_order(
     for line in totals["line_items"]:
         items_list.append({
             "product_id": line["product_id"],
+            "sku": get_product_sku(line["product_id"]),
             "qty": line["quantity"],
             "price": line["line_total_sar"],
             "is_upsell": line["is_upsell"],
         })
-        label = line["product_id"].replace("-", " ").title()
-        summary_parts.append(f"{label} x{line['quantity']}")
-    items_summary = ", ".join(summary_parts)
+        label = get_product_name_ar(line["product_id"])
+        summary_parts.append(f"{label}")
+        
+    items_summary = "/".join(summary_parts)
     items_json = json.dumps(items_list, ensure_ascii=False)
 
     contents = [

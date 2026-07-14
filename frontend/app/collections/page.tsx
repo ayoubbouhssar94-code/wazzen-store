@@ -4,14 +4,14 @@ import { products } from "@/data/products";
 import { ProductCard } from "@/components/product/ProductCard";
 
 export const metadata: Metadata = {
-  title: "كل منتجات وازن | مظلة، حشوة كونسول، مكنسة سيارة",
-  description: "تصفح منتجات وازن لراحة السيارة في السعودية: مظلة عاكسة، حشوة جلد، مكنسة HEPA. الدفع عند الاستلام.",
+  title: "كل منتجات وازن | مظلة نانو، منفاخ ذكي، إصلاح نقر الزجاج",
+  description: "تصفح حلول وازن للسائق في السعودية: مظلة نانو-تيتانيوم، منفاخ AirSafe الذكي، ونظام GlassGuard لنقر الزجاج. الدفع عند الاستلام.",
 };
 
 const benefits = [
-  { label: "حماية من الحرارة", icon: "☀️", productId: "titanium-silver-sunshade" },
-  { label: "ترتيب داخلي", icon: "📱", productId: "premium-leather-gap-console" },
-  { label: "تنظيف سريع", icon: "🌪️", productId: "hepa-car-vacuum" },
+  { label: "حماية من الشمس", icon: "☀️", productId: "nano-titanium-windshield-umbrella" },
+  { label: "ضغط الإطارات", icon: "🛞", productId: "wazzen-airsafe-tire-inflator" },
+  { label: "نقر الزجاج", icon: "🔎", productId: "wazzen-glassguard-chip-system" },
 ];
 
 export default function CollectionsPage() {

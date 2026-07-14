@@ -14,7 +14,6 @@ class Settings(BaseSettings):
     APP_NAME: str = "WAZZEN API"
     FRONTEND_ORIGIN: str = "https://wazzen.shop"
     DATABASE_URL: str = "postgresql+asyncpg://wazzen:wazzen@localhost:5432/wazzen"
-    RUN_MIGRATIONS_ON_START: bool = True
 
     GOOGLE_SHEETS_WEBHOOK_URL: Optional[str] = None
     GOOGLE_SHEETS_WEBHOOK_SECRET: Optional[str] = None
@@ -27,6 +26,9 @@ class Settings(BaseSettings):
     SNAP_PIXEL_ID: Optional[str] = None
     SNAP_ACCESS_TOKEN: Optional[str] = None
 
+    MAXMIND_ACCOUNT_ID: Optional[str] = None
+    MAXMIND_LICENSE_KEY: Optional[str] = None
+
     @property
     def is_production(self) -> bool:
         return self.APP_ENV == "production"
@@ -35,7 +37,11 @@ class Settings(BaseSettings):
     def allowed_origins(self) -> list[str]:
         origins = [
             self.FRONTEND_ORIGIN,
+            "https://wazzen.shop",
             "https://www.wazzen.shop",
+            "http://wazzen.shop",
+            "http://www.wazzen.shop",
+            f"http://{self.FRONTEND_ORIGIN.replace('https://', '')}",
             "http://localhost:3000",
             "http://127.0.0.1:3000",
         ]

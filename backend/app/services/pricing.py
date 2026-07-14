@@ -1,4 +1,5 @@
 from app.schemas.order import OrderItemIn
+from app.db.product_catalog import VALID_PRODUCT_IDS, get_product_sku
 
 OFFER_PRICES: dict[int, int] = {
     1: 199,
@@ -6,13 +7,6 @@ OFFER_PRICES: dict[int, int] = {
     3: 349,
 }
 UPSELL_PRICE: int = 99
-
-VALID_PRODUCT_IDS = {
-    "titanium-silver-sunshade",
-    "premium-leather-gap-console",
-    "hepa-car-vacuum",
-}
-
 
 def get_offer_price(quantity: int) -> int:
     """Return the bundle price for a given quantity."""
@@ -51,6 +45,7 @@ def calculate_totals(items: list[OrderItemIn]) -> dict:
 
         line_items.append({
             "product_id": item.product_id,
+            "sku": get_product_sku(item.product_id),
             "quantity": item.quantity,
             "unit_price_sar": unit_price,
             "line_total_sar": line_total,

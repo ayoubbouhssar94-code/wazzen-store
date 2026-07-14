@@ -22,10 +22,12 @@ export function ProductCard({ product, className }: ProductCardProps) {
       {/* Image */}
       <div className="relative overflow-hidden">
         <SectionImagePlaceholder
-          labelAr="صورة المنتج"
+          labelAr={product.nameAr}
           aspectRatio="1:1"
           color={product.color}
           className="rounded-none"
+          src={product.image}
+          imageFit={product.imageFit ?? "cover"}
         />
         <span className="absolute top-3 right-3 bg-[#FEF3C7] text-[#D97706] text-[11px] font-bold px-2.5 py-1 rounded-full border border-[#D97706]/20">
           كمية محدودة

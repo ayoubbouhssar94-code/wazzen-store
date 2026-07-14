@@ -1,68 +1,93 @@
-const SHEET_NAME = "Orders";
-const SECRET = "CHANGE_ME_TO_THE_SAME_VALUE_AS_GOOGLE_SHEETS_WEBHOOK_SECRET";
+const SECRET = "";
 
 const COLUMNS = [
-  "order_id",
-  "order_number",
-  "created_at",
-  "status",
-  "customer_name",
-  "phone_local",
-  "phone_e164",
-  "city",
-  "items_summary",
-  "items_json",
-  "upsell_accepted",
-  "upsell_product",
-  "subtotal_sar",
-  "upsell_sar",
-  "total_sar",
-  "payment_method",
-  "utm_source",
-  "utm_medium",
-  "utm_campaign",
-  "utm_content",
-  "utm_term",
-  "fbclid",
-  "ttclid",
-  "snap_click_id",
-  "landing_page",
-  "referrer",
-  "user_agent",
-  "ip_address",
-  "meta_event_id",
-  "tiktok_event_id",
-  "snap_event_id",
-  "notes",
+  "date",
+  "orderid",
+  "country",
+  "name",
+  "phone",
+  "product",
+  "sku",
+  "quantity",
+  "total price",
+  "currency",
+  "status"
 ];
 
 function doPost(e) {
   try {
-    const secret = e.parameter.secret || "";
-    if (secret !== SECRET) {
-      return jsonResponse({ ok: false, error: "unauthorized" }, 401);
+    if (SECRET) {
+      const secret = e.parameter.secret || "";
+      if (secret !== SECRET) {
+        return jsonResponse({ ok: false, error: "unauthorized" }, 401);
+      }
     }
 
     const payload = JSON.parse(e.postData.contents || "{}");
     const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-    const sheet = getOrCreateSheet(spreadsheet);
+    const sheet = spreadsheet.getSheets()[0];
     ensureHeader(sheet);
 
-    const row = COLUMNS.map((column) => valueForCell(payload[column]));
+    const rowData = mapPayload(payload);
+    const row = COLUMNS.map((column) => valueForCell(rowData[column]));
     sheet.appendRow(row);
 
     return jsonResponse({
       ok: true,
       row: sheet.getLastRow(),
-      order_number: payload.order_number || "",
+      order_number: rowData["orderid"] || "",
     });
   } catch (error) {
     return jsonResponse({ ok: false, error: String(error) }, 500);
   }
 }
 
-function getOrCreateSheet(spreadsheet) {
-  return spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME);
+function mapPayload(payload) {
+  let items = [];
+  try {
+    items = JSON.parse(payload.items_json || "[]");
+  } catch (error) {
+    items = [];
+  }
+
+  const skus = items
+    .map((item) => item.sku || "")
+    .filter(Boolean)
+    .join("/"); // separated by /
+
+  const quantities = items
+    .map((item) => {
+        const qty = Number(item.qty || item.quantity || 0);
+        return Number.isFinite(qty) ? qty : 0;
+    })
+    .join("/"); // separated by /
+
+  return {
+    date: formatDate(payload.created_at),
+    "orderid": payload.order_number || "",
+    country: "KSA",
+    name: payload.customer_name || "",
+    phone: payload.phone_e164 ? payload.phone_e164.replace('+', '') : (payload.phone_local || ""), // 966... format
+    product: payload.items_summary || "",
+    sku: skus,
+    quantity: quantities,
+    status: "", // empty as requested
+    "total price": payload.total_sar || "",
+    currency: "SAR",
+  };
+}
+
+function formatDate(value) {
+  if (!value) {
+    return Utilities.formatDate(new Date(), "Asia/Riyadh", "yyyy-MM-dd HH:mm");
+  }
+
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    return String(value);
+  }
+
+  return Utilities.formatDate(parsed, "Asia/Riyadh", "yyyy-MM-dd HH:mm");
 }
 
 function ensureHeader(sheet) {
@@ -86,8 +111,6 @@ function jsonResponse(body, statusCode) {
     .createTextOutput(JSON.stringify(body))
     .setMimeType(ContentService.MimeType.JSON);
 
-  // Apps Script web apps do not reliably expose custom HTTP status codes,
-  // so include statusCode in the JSON for backend logging.
   body.statusCode = statusCode || 200;
   output.setContent(JSON.stringify(body));
   return output;

@@ -7,7 +7,7 @@ def make_valid_order(**overrides):
     base = dict(
         customer_name="فاطمة الأحمدي",
         phone="0512345678",
-        items=[OrderItemIn(product_id="titanium-silver-sunshade", quantity=2)],
+        items=[OrderItemIn(product_id="nano-titanium-windshield-umbrella", quantity=2)],
     )
     base.update(overrides)
     return base
@@ -38,8 +38,8 @@ def test_no_items_rejected():
 def test_order_with_upsell():
     order = OrderIn(**make_valid_order(
         items=[
-            OrderItemIn(product_id="titanium-silver-sunshade", quantity=2),
-            OrderItemIn(product_id="premium-leather-gap-console", quantity=1, is_upsell=True),
+            OrderItemIn(product_id="nano-titanium-windshield-umbrella", quantity=2),
+            OrderItemIn(product_id="wazzen-airsafe-tire-inflator", quantity=1, is_upsell=True),
         ]
     ))
     assert len(order.items) == 2
